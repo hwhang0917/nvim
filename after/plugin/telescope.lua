@@ -8,3 +8,10 @@ vim.keymap.set('n', '<C-a>', builtin.git_files, {})
 vim.keymap.set('n', '<C-g>', function()
     builtin.grep_string({ search = vim.fn.input('🔍 Grep > ') })
 end, {})
+
+
+require('telescope').setup{
+    defaults = {
+        disable_devicons = false
+    }
+}
