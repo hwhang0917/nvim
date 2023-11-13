@@ -9,6 +9,23 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+  highlights = {
+      background = {
+          guibg = "NONE"
+      },
+      fill = {
+          guibg = "NONE"
+      },
+      close_button = {
+          guibg = "NONE"
+      },
+      separator_visible = {
+          guibg = "NONE"
+      },
+      tab_close = {
+          guibg = "NONE"
+      }
+  }
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("n", "<leader>y", "\"+y")
