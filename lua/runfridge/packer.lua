@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Nvim Tree
+    use('nvim-tree/nvim-tree.lua')
+
     -- Tokyo Night Theme
     use { 
         'folke/tokyonight.nvim', 
