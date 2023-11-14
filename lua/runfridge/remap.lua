@@ -21,3 +21,10 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Toggle line wrapping
+vim.api.nvim_set_keymap("n", "<leader>lw", ":lua ToggleWrap()<CR>", { noremap = true, silent = true })
+function ToggleWrap()
+    local wrap = vim.wo.wrap
+    vim.wo.wrap = not wrap
+end
