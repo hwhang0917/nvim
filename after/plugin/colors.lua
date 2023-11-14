@@ -8,7 +8,7 @@ function RCS(color)
 	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 
     -- Line Number Color
-    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#9b59b6' })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = 'gray' })
 end
 
 RCS()

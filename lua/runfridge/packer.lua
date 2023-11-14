@@ -17,14 +17,16 @@ return require('packer').startup(function(use)
         },
     }
 
-    -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end
-    }
+    -- Treesitter (Only for Non-Windows)
+    if (vim.fn.has('macunix')) then
+        use {
+            'nvim-treesitter/nvim-treesitter',
+            run = function()
+                local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+                ts_update()
+            end
+        }
+    end
 
     -- Tokyo Night Theme
     use {
