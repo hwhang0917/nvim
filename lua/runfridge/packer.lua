@@ -77,9 +77,12 @@ return require('packer').startup(function(use)
     }
 
     -- Prettier
-    use('neovim/nvim-lspconfig')
-    use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/prettier.nvim')
+    use {
+        'prettier/vim-prettier',
+        run = function()
+        end
+    }
+
 
     -- Zenmode
     use("folke/zen-mode.nvim")
