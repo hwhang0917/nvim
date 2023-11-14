@@ -44,6 +44,12 @@ return require('packer').startup(function(use)
     -- Vim Fugitive
     use('tpope/vim-fugitive')
 
+    -- Vim Surround
+    use('tpope/vim-surround')
+
+    -- Vim Commentary
+    use('tpope/vim-commentary')
+
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
