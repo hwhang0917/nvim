@@ -76,6 +76,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- VSCode Codicon
+    use('mortepau/codicons.nvim')
+
     -- Prettier
     use {
         'prettier/vim-prettier',
