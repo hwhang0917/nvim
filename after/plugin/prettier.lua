@@ -1,7 +1,6 @@
 -- Disable Quickfix
 vim.g["prettier#quickfix_enabled"]=0
-
--- Automatically run PrettierAsync on specified file types
-vim.api.nvim_exec([[
-  autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
-]], false)
+-- Enable auto formatting of files that have "@format" or "@prettier" tag
+vim.g["prettier#autoformat"] = 1
+-- Allow auto formatting for files without "@format" or "@prettier" tag
+vim.g["prettier#autoformat_require_pragma"] = 0
