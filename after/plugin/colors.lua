@@ -11,4 +11,23 @@ function RCS(color)
     vim.api.nvim_set_hl(0, 'LineNr', { fg = 'gray' })
 end
 
+-- Transform Toggle
+IsToggled = true
+
+-- Toggle Transform ~ Opaque Background
+function TOB(color)
+    if (IsToggled)
+        then
+            color = color or 'tokyonight-moon'
+            vim.cmd.colorscheme(color)
+        else
+            RCS()
+        end
+        IsToggled = not IsToggled
+    end
+
+-- Make toggle keybinding
+vim.api.nvim_set_keymap("n", "<leader>tt", ":lua TOB()<CR>", { noremap = true, silent = true })
+
+-- Defaults to transparent background
 RCS()
