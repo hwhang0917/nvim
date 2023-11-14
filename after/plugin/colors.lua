@@ -1,5 +1,5 @@
 -- Reset Colorscheme
-function rcs(color)
+function RCS(color)
 	color = color or 'tokyonight-moon'
 	vim.cmd.colorscheme(color)
 
@@ -11,4 +11,4 @@ function rcs(color)
     vim.api.nvim_set_hl(0, 'LineNr', { fg = '#9b59b6' })
 end
 
-rcs()
+RCS()

@@ -9,21 +9,30 @@ return require('packer').startup(function(use)
 
     -- Telescope
     use {
-        'nvim-telescope/telescope.nvim', 
+        'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
-        requires = { 
+        requires = {
             {'nvim-lua/plenary.nvim'},
             {'nvim-tree/nvim-web-devicons'}
         },
     }
 
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end
+    }
+
     -- Tokyo Night Theme
-    use { 
-        'folke/tokyonight.nvim', 
-        as = 'tokyonight', 
-        config = function() 
-            vim.cmd.colorscheme('tokyonight-moon') 
-        end 
+    use {
+        'folke/tokyonight.nvim',
+        as = 'tokyonight',
+        config = function()
+            vim.cmd.colorscheme('tokyonight-moon')
+        end
     }
 
     -- Harpoon
@@ -63,6 +72,9 @@ return require('packer').startup(function(use)
     use('neovim/nvim-lspconfig')
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
+
+    -- Zenmode
+    use("folke/zen-mode.nvim")
 
     -- WakaTime
     use('wakatime/vim-wakatime')
