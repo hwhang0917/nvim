@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter (Only for Non-Windows)
-    if (vim.fn.has('macunix')) then
+    if (vim.loop.os_uname().sysname ~= 'Windows_NT') then
         use {
             'nvim-treesitter/nvim-treesitter',
             run = function()
