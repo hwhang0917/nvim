@@ -37,6 +37,9 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Indent Guide
+    use('nathanaelkane/vim-indent-guides')
+
     -- Harpoon
     use('theprimeagen/harpoon')
 
@@ -85,10 +88,12 @@ return require('packer').startup(function(use)
         run = 'yarn install --frozen-lockfile --production'
     }
 
-
     -- Zenmode
     use("folke/zen-mode.nvim")
 
     -- WakaTime
     use('wakatime/vim-wakatime')
+
+    -- Emmet
+    use('mattn/emmet-vim')
 end)
