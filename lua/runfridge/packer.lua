@@ -96,4 +96,7 @@ return require('packer').startup(function(use)
 
     -- Emmet
     use('mattn/emmet-vim')
+
+    -- Colorizer
+    use('chrisbra/colorizer')
 end)
