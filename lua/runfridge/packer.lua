@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
     -- Vim Commentary
     use('tpope/vim-commentary')
 
+    -- Vim Rzip
+    use('lbrayner/vim-rzip')
+
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
