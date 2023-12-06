@@ -49,6 +49,9 @@ return require('packer').startup(function(use)
     -- Vim Fugitive
     use('tpope/vim-fugitive')
 
+    -- Vim Blamer
+    use('APZelos/blamer.nvim')
+
     -- Vim Surround
     use('tpope/vim-surround')
 
