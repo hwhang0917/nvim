@@ -49,6 +49,9 @@ return require('packer').startup(function(use)
     -- Vim Fugitive
     use('tpope/vim-fugitive')
 
+    -- Vim Git Gutter
+    use('airblade/vim-gitgutter')
+
     -- Vim Blamer
     use('APZelos/blamer.nvim')
 
