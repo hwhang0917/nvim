@@ -25,6 +25,3 @@ require('nvim-tree').setup({
 vim.keymap.set('n', '<C-n>', function ()
     api.tree.toggle()
 end)
-
--- Transparent Background
-pcall(vim.cmd, [[highlight NvimTreeNormal guibg=NONE ctermbg=NONE]])
