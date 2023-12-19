@@ -17,6 +17,23 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Nvim Tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons'
+        }
+    }
+
+    -- BarBar
+    use {
+        'romgrk/barbar.nvim',
+        requires = {
+            {'nvim-tree/nvim-web-devicons'},
+            {'lewis6991/gitsigns.nvim'}
+        }
+    }
+
     -- Treesitter (Only for Non-Windows)
     if (vim.loop.os_uname().sysname ~= 'Windows_NT') then
         use {
@@ -39,9 +56,6 @@ return require('packer').startup(function(use)
 
     -- Indent Guide
     use('nathanaelkane/vim-indent-guides')
-
-    -- Harpoon
-    use('theprimeagen/harpoon')
 
     -- Undotree
     use('mbbill/undotree')
