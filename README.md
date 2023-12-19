@@ -2,22 +2,28 @@
 
 > My Neovim Configuration file inspired by [ThePrimeagen](https://github.com/ThePrimeagen)
 
+## Requirement
+
+-   [Neovim ^0.7](https://neovim.io/)
+
 ## Setup Guide
 
-1. Clone this repository
+1. Remove or backup previous nvim Configuration
 
-  * Windows
+2. Clone this repository
+
+-   Windows
 
     ```sh
     git clone https://github.com/hwhang0917/nvim.git %APPDATA%/nvim
     ```
 
-  * MacOS
+-   MacOS
 
     ```sh
     git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
     ```
 
-2. Open `lua/runfridge/packer.lua`
+3. Open `lua/runfridge/packer.lua`
 
-3. Execute `:so` then `:PackerSync`
+4. Execute `:so` then `:PackerSync`
