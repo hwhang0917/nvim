@@ -24,6 +24,8 @@
     git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
     ```
 
-3. Open `lua/runfridge/packer.lua`
+3. Install [Packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
 
-4. Execute `:so` then `:PackerSync`
+4. Open `lua/runfridge/packer.lua`
+
+5. Execute `:so` then `:PackerSync`
