@@ -7,8 +7,23 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use('wbthomason/packer.nvim')
 
+    -- Install only for non-Windows platform
+    if (vim.loop.os_uname().sysname ~= 'Windows_NT') then
+        -- Treesitter
+        use {
+            'nvim-treesitter/nvim-treesitter',
+            run = function()
+                local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+                ts_update()
+            end
+        }
+    end
+
     -- Github Copilot
     use('github/copilot.vim')
+
+    -- Git Blame
+    use('f-person/git-blame.nvim')
 
     -- Telescope
     use {
@@ -37,17 +52,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- Treesitter (Only for Non-Windows)
-    if (vim.loop.os_uname().sysname ~= 'Windows_NT') then
-        use {
-            'nvim-treesitter/nvim-treesitter',
-            run = function()
-                local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-                ts_update()
-            end
-        }
-    end
-
     -- Tokyo Night Theme
     use {
         'folke/tokyonight.nvim',
@@ -68,9 +72,6 @@ return require('packer').startup(function(use)
 
     -- Vim Git Gutter
     use('airblade/vim-gitgutter')
-
-    -- Vim Blamer
-    use('APZelos/blamer.nvim')
 
     -- Vim Surround
     use('tpope/vim-surround')
