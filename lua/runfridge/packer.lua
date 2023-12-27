@@ -61,6 +61,16 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- Vim Markdown Preview
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = 'cd app && yarn install',
+        setup = function()
+            vim.g.mkdp_filetypes = { 'markdown' }
+        end,
+        ft = { 'markdown' }
+    }
+
     -- Indent Guide
     use('nathanaelkane/vim-indent-guides')
 
