@@ -21,6 +21,10 @@ vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Vertical Split
+vim.keymap.set("n", "<C-w>-", ":vsplit<CR>")
+vim.keymap.set("n", "<C-w>_", ":split<CR>")
+
 -- Toggle line wrapping
 vim.api.nvim_set_keymap("n", "<leader>lw", ":lua ToggleWrap()<CR>", { noremap = true, silent = true })
 function ToggleWrap()

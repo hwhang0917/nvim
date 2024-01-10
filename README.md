@@ -4,7 +4,7 @@
 
 ## Requirement
 
--   [Neovim ^0.7](https://neovim.io/)
+- [Neovim ^0.7](https://neovim.io/)
 
 ## Setup Guide
 
@@ -12,17 +12,17 @@
 
 2. Clone this repository
 
--   Windows
+- Windows
 
-    ```sh
-    git clone https://github.com/hwhang0917/nvim.git %APPDATA%/nvim
-    ```
+  ```sh
+  git clone https://github.com/hwhang0917/nvim.git %APPDATA%/nvim
+  ```
 
--   MacOS
+- MacOS
 
-    ```sh
-    git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
-    ```
+  ```sh
+  git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
+  ```
 
 3. Install [Packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
 

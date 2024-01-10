@@ -19,6 +19,12 @@ return require('packer').startup(function(use)
         }
     end
 
+    -- Lualine
+    use('nvim-lualine/lualine.nvim')
+
+    -- Comform (Formatter)
+    use('stevearc/conform.nvim')
+
     -- Github Copilot
     use('github/copilot.vim')
 
@@ -30,8 +36,8 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
         requires = {
-            {'nvim-lua/plenary.nvim'},
-            {'nvim-tree/nvim-web-devicons'}
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-tree/nvim-web-devicons' }
         },
     }
 
@@ -47,8 +53,8 @@ return require('packer').startup(function(use)
     use {
         'romgrk/barbar.nvim',
         requires = {
-            {'nvim-tree/nvim-web-devicons'},
-            {'lewis6991/gitsigns.nvim'}
+            { 'nvim-tree/nvim-web-devicons' },
+            { 'lewis6991/gitsigns.nvim' }
         }
     }
 
@@ -98,32 +104,26 @@ return require('packer').startup(function(use)
         branch = 'v1.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+            { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
         }
     }
 
     -- VSCode Codicon
     use('mortepau/codicons.nvim')
-
-    -- Prettier
-    use {
-        'prettier/vim-prettier',
-        run = 'yarn install --frozen-lockfile --production'
-    }
 
     -- Zenmode
     use("folke/zen-mode.nvim")

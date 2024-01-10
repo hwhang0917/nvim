@@ -22,6 +22,6 @@ require('nvim-tree').setup({
 })
 
 -- Toggle Nvim Tree
-vim.keymap.set('n', '<C-n>', function ()
+vim.keymap.set('n', '<C-n>', function()
     api.tree.toggle()
 end)

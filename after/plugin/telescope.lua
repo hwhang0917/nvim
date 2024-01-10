@@ -11,9 +11,13 @@ vim.keymap.set('n', '<C-h>', builtin.help_tags, {})
 vim.keymap.set('n', '<C-g>', function()
     builtin.grep_string({ search = vim.fn.input('🔍 Grep > ') })
 end, {})
+-- Open Vim Command Mode
+vim.keymap.set('n', '<C-f>', function()
+    builtin.commands()
+end, {})
 
 
-require('telescope').setup{
+require('telescope').setup {
     defaults = {
         disable_devicons = false
     }

@@ -15,8 +15,10 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 if (vim.fn.has('macunix'))
-    then vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-    else vim.opt.undodir = os.getenv("HOME") .. "./vim/undodir"
+then
+    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+else
+    vim.opt.undodir = os.getenv("HOME") .. "./vim/undodir"
 end
 vim.opt.undofile = true
 
