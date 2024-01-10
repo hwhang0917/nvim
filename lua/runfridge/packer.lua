@@ -22,9 +22,6 @@ return require('packer').startup(function(use)
     -- Lualine
     use('nvim-lualine/lualine.nvim')
 
-    -- Comform (Formatter)
-    use('stevearc/conform.nvim')
-
     -- Github Copilot
     use('github/copilot.vim')
 
