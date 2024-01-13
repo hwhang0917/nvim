@@ -1,7 +1,8 @@
 local builtin = require('telescope.builtin')
 
 -- Open Files Fuzzy Search
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+-- vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 -- Open Git-Files Fuzzy Search
 -- vim.keymap.set('n', '<C-o>', builtin.git_files, {})
 -- Open Vim Help
