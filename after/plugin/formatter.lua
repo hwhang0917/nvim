@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     desc = "Auto-format JavaScript and TypeScript files after saving",
     callback = function()
         local fileName = vim.api.nvim_buf_get_name(0)
-        vim.cmd(":!prettier --log-level silent --write " .. fileName)
+        vim.cmd("silent !prettier --log-level silent --write " .. fileName)
     end,
     group = autocmd_group
 })
