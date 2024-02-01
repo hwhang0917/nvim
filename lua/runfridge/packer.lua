@@ -20,7 +20,33 @@ return require('packer').startup(function(use)
     end
 
     -- Lualine
-    use('nvim-lualine/lualine.nvim')
+    use {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("lualine").setup({
+                options = {
+                    theme = "tokyonight",
+                },
+                sections = {
+                    lualine_a = { "mode" },
+                    lualine_b = { "diff", "diagnostics" },
+                    lualine_c = { "filename" },
+                    lualine_x = { "fileformat", "filetype" },
+                    lualine_y = { "progress" },
+                    lualine_z = { "location" },
+                },
+            })
+        end,
+    }
+
+    -- FZF
+    use {
+        "junegunn/fzf",
+        run = function()
+            vim.fn['fzf#install']()
+        end
+    }
 
     -- Github Copilot
     use('github/copilot.vim')
