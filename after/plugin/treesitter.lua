@@ -2,7 +2,23 @@
 if (vim.loop.os_uname().sysname ~= 'Windows_NT') then
     require 'nvim-treesitter.configs'.setup {
         -- A list of parser names, or "all"
-        ensure_installed = { "vimdoc", "javascript", "typescript", "c", "lua", "rust" },
+        ensure_installed = {
+            "vimdoc",
+            "javascript",
+            "typescript",
+            "c",
+            "lua",
+            "rust",
+            "yaml",
+            "json",
+            "html",
+            "css",
+            "bash",
+            "python",
+            "go",
+            "tsx",
+            "markdown"
+        },
 
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,
