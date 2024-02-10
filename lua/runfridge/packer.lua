@@ -19,6 +19,26 @@ return require('packer').startup(function(use)
         }
     end
 
+    -- Nui
+    use('MunifTanjim/nui.nvim')
+
+    -- Nvim notify
+    use('rcarriga/nvim-notify')
+
+    -- Noice
+    use {
+        'folke/noice.nvim',
+        dependencies = { 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' },
+        config = function()
+            require("noice").setup({
+                presets = {
+                    lsp_doc_border = true, -- add a border to hover docs and signature help
+                },
+            })
+        end
+    }
+
+
     -- Lualine
     use {
         'nvim-lualine/lualine.nvim',
@@ -135,6 +155,7 @@ return require('packer').startup(function(use)
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-cmdline' },
             { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },

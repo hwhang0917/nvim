@@ -20,3 +20,5 @@ require('telescope').setup {
         path_display = { "truncate" },
     }
 }
+
+require('telescope').load_extension('noice')
