@@ -1,10 +1,10 @@
 # Neovim Configuration
 
-> My Neovim Configuration file inspired by [ThePrimeagen](https://github.com/ThePrimeagen)
+> My Neovim Configuration file inspired by [Andrew Courter](https://www.youtube.com/@ascourter) and [ThePrimeagen](https://www.youtube.com/ThePrimeagen)
 
 ## Requirement
 
-- [Neovim ^0.7](https://neovim.io/)
+- [Neovim ^0.9.5](https://neovim.io/)
 
 ## Setup Guide
 
@@ -18,14 +18,8 @@
   git clone https://github.com/hwhang0917/nvim.git %APPDATA%/nvim
   ```
 
-- MacOS
+- Unix-Like
 
   ```sh
   git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
   ```
-
-3. Install [Packer.nvim](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
-
-4. Open `lua/runfridge/packer.lua`
-
-5. Execute `:so` then `:PackerSync`
