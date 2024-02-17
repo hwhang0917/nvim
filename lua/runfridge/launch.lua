@@ -1,3 +1,6 @@
+-- Import utility functions
+require('runfridge.utils.init')
+
 PLUGIN_SPECS = {}
 
 function Add(plugin)
