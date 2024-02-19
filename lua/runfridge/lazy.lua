@@ -2,7 +2,6 @@
 Add 'runfridge.plugins.persistence'
 Add 'runfridge.plugins.tpope'
 Add 'runfridge.plugins.telescope'
-Add 'runfridge.plugins.tmux'
 Add 'runfridge.plugins.markdown-preview'
 -- Theme
 Add 'runfridge.plugins.tokyonight'

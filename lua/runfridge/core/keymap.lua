@@ -18,12 +18,6 @@ vim.g.maplocalleader = " "
 keymap("", "<Space>", "<Nop>", opts)
 keymap(normal_mode, "Q", "<nop>", opts)
 
--- Better window navigation
-keymap(normal_mode, "<C-h>", "<C-w>h", opts)
-keymap(normal_mode, "<C-j>", "<C-w>j", opts)
-keymap(normal_mode, "<C-k>", "<C-w>k", opts)
-keymap(normal_mode, "<C-l>", "<C-w>l", opts)
-
 -- Deny regular keys
 keymap(normal_mode, "<left>", ":echohl WarningMsg<Bar>echo 'USE h you SWINE!'<Bar>echohl None<CR>", opts)
 keymap(normal_mode, "<right>", ":echohl WarningMsg<Bar>echo 'USE l you SWINE!'<Bar>echohl None<CR>", opts)
