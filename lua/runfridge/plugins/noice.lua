@@ -11,6 +11,9 @@ return {
         presets = {
             lsp_doc_border = true,
         },
+        messages = {
+            enabled = false,
+        },
     },
     dependencies = {
         "MunifTanjim/nui.nvim",
