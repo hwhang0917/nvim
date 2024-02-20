@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
         require('tokyonight').setup({
-            style = "storm",
+            style = "moon",
             terminal_colors = true,
             styles = {
                 comments = { italic = true },

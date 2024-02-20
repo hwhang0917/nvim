@@ -1,6 +1,6 @@
 -- Reset Colorscheme
 function RCS(color)
-    color = color or 'tokyonight-storm'
+    color = color or 'tokyonight-moon'
     vim.cmd.colorscheme(color)
 
     -- Transparent Background
@@ -19,7 +19,7 @@ IsToggled = true
 function TOB(color)
     if (IsToggled)
     then
-        color = color or 'tokyonight-storm'
+        color = color or 'tokyonight-moon'
         vim.cmd.colorscheme(color)
     else
         RCS()
