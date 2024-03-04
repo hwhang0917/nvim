@@ -13,6 +13,7 @@ lsp.ensure_installed({
     'html',
     'dockerls',
     'bashls',
+    'gopls',
 })
 
 local cmp = require("cmp")
