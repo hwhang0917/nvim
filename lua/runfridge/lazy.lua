@@ -22,6 +22,7 @@ Add 'runfridge.plugins.conform'
 Add 'runfridge.plugins.copilot'
 -- Misc
 Add 'runfridge.plugins.wakatime'
+Add 'runfridge.plugins.garbage'
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
