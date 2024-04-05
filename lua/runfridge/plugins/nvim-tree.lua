@@ -10,6 +10,7 @@ return {
                 relativenumber = true,
                 cursorline = true,
                 width = {},
+                side = "right"
             },
             renderer = {
                 add_trailing = true,
