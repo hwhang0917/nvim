@@ -15,7 +15,7 @@ Add 'runfridge.plugins.lualine'
 Add 'runfridge.plugins.nvim-tree'
 Add 'runfridge.plugins.barbar'
 Add 'runfridge.plugins.blamer'
-Add 'runfridge.plugins.indent-blankline'
+-- Add 'runfridge.plugins.indent-blankline'
 -- Code Syntax & LSP
 Add 'runfridge.plugins.treesitter'
 Add 'runfridge.plugins.lsp'
