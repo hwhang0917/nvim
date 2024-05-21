@@ -5,8 +5,8 @@ require 'barbar'.setup {
     }
 }
 
-vim.keymap.set('n', '<C-,>', '<Cmd>BufferPrevious<CR>')
-vim.keymap.set('n', '<C-.>', '<Cmd>BufferNext<CR>')
+vim.keymap.set('n', '<M-j>', '<Cmd>BufferPrevious<CR>')
+vim.keymap.set('n', '<M-k>', '<Cmd>BufferNext<CR>')
 vim.keymap.set('n', '<M-w>', '<Cmd>BufferClose<CR>')
 -- vim.keymap.set('n', '<M-p>', '<Cmd>BufferPin<CR>')
 
