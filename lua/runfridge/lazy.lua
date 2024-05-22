@@ -4,6 +4,7 @@ Add 'runfridge.plugins.tpope'
 Add 'runfridge.plugins.telescope'
 Add 'runfridge.plugins.markdown-preview'
 Add 'runfridge.plugins.zen'
+Add 'runfridge.plugins.harpoon'
 -- Theme
 Add 'runfridge.plugins.tokyonight'
 Add 'runfridge.plugins.web-devicons'
@@ -24,6 +25,7 @@ Add 'runfridge.plugins.copilot'
 -- Misc
 Add 'runfridge.plugins.wakatime'
 Add 'runfridge.plugins.garbage'
+Add 'runfridge.plugins.plenary'
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
