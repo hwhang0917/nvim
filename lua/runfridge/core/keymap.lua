@@ -62,3 +62,11 @@ keymap(normal_mode, "<C-w>_", ":split<CR>", opts)
 keymap_fn(normal_mode, "<leader>lw", function()
     vim.wo.wrap = not vim.wo.wrap
 end, opts)
+
+-- Move around error/warnings
+keymap_fn(normal_mode, "[g", function()
+    vim.diagnostic.goto_prev()
+end, opts)
+keymap_fn(normal_mode, "]g", function()
+    vim.diagnostic.goto_next()
+end, opts)
