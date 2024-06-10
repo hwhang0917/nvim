@@ -5,6 +5,9 @@ Add 'runfridge.plugins.telescope'
 Add 'runfridge.plugins.markdown-preview'
 Add 'runfridge.plugins.zen'
 Add 'runfridge.plugins.harpoon'
+-- Git
+Add 'runfridge.plugins.fugitive'
+Add 'runfridge.plugins.gitsigns'
 -- Theme
 Add 'runfridge.plugins.tokyonight'
 Add 'runfridge.plugins.web-devicons'
@@ -13,7 +16,6 @@ Add 'runfridge.plugins.illuminate'
 Add 'runfridge.plugins.noice'
 Add 'runfridge.plugins.lualine'
 Add 'runfridge.plugins.nvim-tree'
-Add 'runfridge.plugins.blamer'
 Add 'runfridge.plugins.indent-blankline'
 -- Code Syntax & LSP
 Add 'runfridge.plugins.treesitter'
