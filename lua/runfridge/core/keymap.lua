@@ -19,7 +19,7 @@ vim.keymap.set(normal_mode, "<C-[>", function()
         print("Using Ibus, switching to English")
         vim.fn.system("ibus engine xkb:us::eng")
     else
-        print("no")
+        -- TODO: Add support for other input methods
     end
 
     -- Press <Esc>
