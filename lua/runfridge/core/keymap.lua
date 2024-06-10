@@ -14,9 +14,22 @@ local keymap_fn = vim.keymap.set
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set(normal_mode, "<C-[>", function()
+    if vim.fn.executable("ibus") == 1 then
+        print("Using Ibus, switching to English")
+        vim.fn.system("ibus engine xkb:us::eng")
+    else
+        print("no")
+    end
+
+    -- Press <Esc>
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, true, true), 'n', true)
+end, opts)
+
 -- Just for sanity
 keymap("", "<Space>", "<Nop>", opts)
 keymap(normal_mode, "Q", "<nop>", opts)
+-- keymap(normal_mode, "<C-[>", "<Esc>", opts)
 
 -- Deny regular keys
 keymap(normal_mode, "<left>", ":echohl WarningMsg<Bar>echo 'USE h you SWINE!'<Bar>echohl None<CR>", opts)
