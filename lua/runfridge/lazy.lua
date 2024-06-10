@@ -10,7 +10,6 @@ Add 'runfridge.plugins.tokyonight'
 Add 'runfridge.plugins.web-devicons'
 Add 'runfridge.plugins.illuminate'
 -- Interface
-Add 'runfridge.plugins.dashboard'
 Add 'runfridge.plugins.noice'
 Add 'runfridge.plugins.lualine'
 Add 'runfridge.plugins.nvim-tree'
