@@ -2,18 +2,19 @@ local lsp = require('lsp-zero')
 
 lsp.preset("recommended")
 
+-- Uncomment if you want to use the default LSP settings.
 lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'tailwindcss',
     'lua_ls',
-    'yamlls',
-    'rust_analyzer',
-    'jsonls',
-    'html',
-    'dockerls',
-    'bashls',
-    'gopls',
+    -- 'tsserver',
+    -- 'eslint',
+    -- 'tailwindcss',
+    -- 'yamlls',
+    -- 'rust_analyzer',
+    -- 'jsonls',
+    -- 'html',
+    -- 'dockerls',
+    -- 'bashls',
+    -- 'gopls',
 })
 
 local cmp = require("cmp")
