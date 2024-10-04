@@ -16,10 +16,10 @@ return {
                 yaml = { "yamlfix" },
                 css = { { "prettier" } },
             },
-            format_on_save = {
-                timeout_ms = 10000,
-                lsp_fallback = true,
-            }
+            -- format_on_save = {
+            --     timeout_ms = 10000,
+            --     lsp_fallback = true,
+            -- }
         })
     end
 }

@@ -14,6 +14,7 @@ lsp.ensure_installed({
     'html',
     'dockerls',
     'bashls',
+    'volar'
 })
 
 local cmp = require("cmp")
