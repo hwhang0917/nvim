@@ -19,7 +19,8 @@ return {
                 "python",
                 "go",
                 "tsx",
-                "markdown"
+                "markdown",
+                "vue",
             },
             sync_install = false,
             auto_install = false,
