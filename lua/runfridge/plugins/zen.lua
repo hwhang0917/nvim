@@ -1,8 +1,8 @@
 return {
-    'folke/zen-mode.nvim',
-    opts = {
-        window = {
-            backdrop = 0.95,
-        }
-    }
+	"folke/zen-mode.nvim",
+	opts = {
+		window = {
+			backdrop = 0.95,
+		},
+	},
 }

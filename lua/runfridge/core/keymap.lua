@@ -15,15 +15,15 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.keymap.set(normal_mode, "<C-[>", function()
-    if vim.fn.executable("ibus") == 1 then
-        print("Using Ibus, switching to English")
-        vim.fn.system("ibus engine xkb:us::eng")
-    else
-        -- TODO: Add support for other input methods
-    end
+	if vim.fn.executable("ibus") == 1 then
+		print("Using Ibus, switching to English")
+		vim.fn.system("ibus engine xkb:us::eng")
+	else
+		-- TODO: Add support for other input methods
+	end
 
-    -- Press <Esc>
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, true, true), 'n', true)
+	-- Press <Esc>
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, true, true), "n", true)
 end, opts)
 
 -- Just for sanity
@@ -55,14 +55,14 @@ keymap(normal_mode, "<leader>j", "ddp", opts)
 keymap(normal_mode, "<leader>k", "ddkP", opts)
 
 -- Register for yank and paste
-keymap(visual_block_mode, "<leader>p", "\"_dP", opts)
+keymap(visual_block_mode, "<leader>p", '"_dP', opts)
 
-keymap(normal_mode, "<leader>y", "\"+y", opts)
-keymap(visual_mode, "<leader>y", "\"+y", opts)
-keymap(normal_mode, "<leader>Y", "\"+Y", opts)
+keymap(normal_mode, "<leader>y", '"+y', opts)
+keymap(visual_mode, "<leader>y", '"+y', opts)
+keymap(normal_mode, "<leader>Y", '"+Y', opts)
 
-keymap(normal_mode, "<leader>d", "\"_d", opts)
-keymap(visual_mode, "<leader>d", "\"_d", opts)
+keymap(normal_mode, "<leader>d", '"_d', opts)
+keymap(visual_mode, "<leader>d", '"_d', opts)
 
 -- Convenient keymap
 keymap(normal_mode, "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], no_silent_opts)
@@ -73,13 +73,13 @@ keymap(normal_mode, "<C-w>_", ":split<CR>", opts)
 
 -- Toggle line wrapping
 keymap_fn(normal_mode, "<leader>lw", function()
-    vim.wo.wrap = not vim.wo.wrap
+	vim.wo.wrap = not vim.wo.wrap
 end, opts)
 
 -- Move around error/warnings
 keymap_fn(normal_mode, "[g", function()
-    vim.diagnostic.goto_prev()
+	vim.diagnostic.goto_prev()
 end, opts)
 keymap_fn(normal_mode, "]g", function()
-    vim.diagnostic.goto_next()
+	vim.diagnostic.goto_next()
 end, opts)
