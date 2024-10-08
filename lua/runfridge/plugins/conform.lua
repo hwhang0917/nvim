@@ -15,12 +15,12 @@ return {
 				bash = { "beautysh" },
 				yaml = { "yamlfix" },
 				css = { "prettier" },
-				vue = { "volar", "prettier" },
+				vue = { "volar", "prettier", "eslint" },
 			},
-			format_on_save = {
-				timeout_ms = 10000,
-				lsp_fallback = true,
-			},
+			-- format_on_save = {
+			--     timeout_ms = 10000,
+			--     lsp_fallback = true,
+			-- },
 		})
 	end,
 }
