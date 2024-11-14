@@ -23,6 +23,7 @@ Add("runfridge.plugins.treesitter")
 Add("runfridge.plugins.lsp")
 Add("runfridge.plugins.conform")
 Add("runfridge.plugins.copilot")
+Add("runfridge.plugins.nvim-java")
 -- Misc
 Add("runfridge.plugins.wakatime")
 Add("runfridge.plugins.garbage")
