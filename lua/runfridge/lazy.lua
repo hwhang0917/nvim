@@ -2,7 +2,6 @@
 Add("runfridge.plugins.persistence")
 Add("runfridge.plugins.tpope")
 Add("runfridge.plugins.telescope")
-Add("runfridge.plugins.markdown-preview")
 Add("runfridge.plugins.zen")
 Add("runfridge.plugins.harpoon")
 -- Git
