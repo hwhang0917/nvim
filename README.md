@@ -15,7 +15,7 @@
 - Windows
 
   ```sh
-  git clone https://github.com/hwhang0917/nvim.git %APPDATA%/nvim
+  git clone https://github.com/hwhang0917/nvim.git %localappdata%/nvim
   ```
 
 - Unix-Like
