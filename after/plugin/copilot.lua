@@ -8,7 +8,12 @@ vim.g.copilot_no_tab_map = true
 vim.g.copilot_enabled = true
 
 vim.keymap.set("n", "<leader>tc", function()
-    local is_enabled = vim.fn.exists("g:copilot_enabled") == 1 and vim.g.copilot_enabled == 1
+    local copilot_exists = vim.fn.exists("g:copilot_enabled") == 1
+    if not copilot_exists then return end
+
+    local value = vim.g.copilot_enabled
+    local is_enabled is_enabled = value == vim.v['true'] or value == 1
+
     local status_message
     if is_enabled then
         vim.cmd("Copilot disable")
