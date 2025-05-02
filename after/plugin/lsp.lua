@@ -15,6 +15,7 @@ lsp.ensure_installed({
 	"dockerls",
 	"bashls",
 	"volar",
+    "gopls"
 })
 
 local cmp = require("cmp")

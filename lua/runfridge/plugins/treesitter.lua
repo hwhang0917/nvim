@@ -20,7 +20,7 @@ return {
 				"go",
 				"tsx",
 				"markdown",
-				"vue",
+				"vue"
 			},
 			sync_install = false,
 			auto_install = false,

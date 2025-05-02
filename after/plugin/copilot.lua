@@ -7,7 +7,7 @@ vim.keymap.set("i", "<C-c>", 'copilot#Accept("\\<CR>")', {
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_enabled = true
 
-vim.keymap.set("n", "<leader>tc", function()
+vim.keymap.set("n", "<leader>cp", function()
     local copilot_exists = vim.fn.exists("g:copilot_enabled") == 1
     if not copilot_exists then return end
 
