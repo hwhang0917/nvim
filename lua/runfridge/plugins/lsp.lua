@@ -6,9 +6,13 @@ return {
 		{ "neovim/nvim-lspconfig" }, -- Required
 		{ -- Optional
 			"williamboman/mason.nvim",
+            branch = "v1.x",
 			build = ":MasonUpdate",
 		},
-		{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+		{
+            "williamboman/mason-lspconfig.nvim",
+            branch = "v1.x"
+        }, -- Optional
 
 		-- Autocompletion
 		{ "hrsh7th/nvim-cmp" }, -- Required

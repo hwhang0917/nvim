@@ -6,7 +6,6 @@ Add("runfridge.plugins.zen")
 Add("runfridge.plugins.harpoon")
 -- Git
 Add("runfridge.plugins.fugitive")
-Add("runfridge.plugins.gitsigns")
 -- Theme
 Add("runfridge.plugins.tokyonight")
 Add("runfridge.plugins.web-devicons")
