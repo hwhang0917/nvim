@@ -1,6 +1,12 @@
+local default_theme = "catppuccin"
+local default_transparency = true
+
+vim.cmd.colorscheme(default_theme)
+require("catppuccin").setup({ flavour = "mocha" })
+
 -- Reset Colorscheme
 function RCS(color)
-	color = color or "tokyonight-moon"
+	color = color or default_theme
 	vim.cmd.colorscheme(color)
 
 	-- Transparent Background
@@ -15,13 +21,13 @@ function RCS(color)
 	vim.api.nvim_set_hl(0, "LineNr", { fg = "gray" })
 end
 
--- Transform Toggle
-IsToggled = true
+-- Transparent Toggle
+local IsToggled = default_transparency
 
 -- Toggle Transparent ~ Opaque Background
 function TOB(color)
 	if IsToggled then
-		color = color or "tokyonight-moon"
+		color = color or default_theme
 		vim.cmd.colorscheme(color)
 	else
 		RCS()
@@ -33,4 +39,4 @@ end
 vim.api.nvim_set_keymap("n", "<leader>tt", ":lua TOB()<CR>", { noremap = true, silent = true })
 
 -- Defaults to transparent background
-RCS()
+if default_transparency then RCS() end

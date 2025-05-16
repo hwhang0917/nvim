@@ -8,8 +8,10 @@ Add("runfridge.plugins.utility.zen")
 -- Git
 Add("runfridge.plugins.git.fugitive")
 -- Theme
+Add("runfridge.plugins.theme.catppuccin")
 Add("runfridge.plugins.theme.tokyonight")
 Add("runfridge.plugins.theme.web-devicons")
+Add("runfridge.plugins.theme.yugen")
 -- Interface
 Add("runfridge.plugins.interface.color-highlighter")
 Add("runfridge.plugins.interface.illuminate")
