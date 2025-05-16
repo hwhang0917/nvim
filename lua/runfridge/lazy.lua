@@ -1,31 +1,30 @@
 -- Utilities
-Add("runfridge.plugins.persistence")
-Add("runfridge.plugins.tpope")
-Add("runfridge.plugins.telescope")
-Add("runfridge.plugins.zen")
-Add("runfridge.plugins.harpoon")
+Add("runfridge.plugins.utility.arena")
+Add("runfridge.plugins.utility.harpoon")
+Add("runfridge.plugins.utility.nvim-tree")
+Add("runfridge.plugins.utility.telescope")
+Add("runfridge.plugins.utility.tpope")
+Add("runfridge.plugins.utility.zen")
 -- Git
-Add("runfridge.plugins.fugitive")
+Add("runfridge.plugins.git.fugitive")
 -- Theme
-Add("runfridge.plugins.tokyonight")
-Add("runfridge.plugins.web-devicons")
-Add("runfridge.plugins.illuminate")
+Add("runfridge.plugins.theme.tokyonight")
+Add("runfridge.plugins.theme.web-devicons")
 -- Interface
-Add("runfridge.plugins.noice")
-Add("runfridge.plugins.lualine")
-Add("runfridge.plugins.nvim-tree")
-Add("runfridge.plugins.indent-blankline")
-Add("runfridge.plugins.color-highlighter")
-Add("runfridge.plugins.arena")
+Add("runfridge.plugins.interface.color-highlighter")
+Add("runfridge.plugins.interface.illuminate")
+Add("runfridge.plugins.interface.indent-blankline")
+Add("runfridge.plugins.interface.lualine")
+Add("runfridge.plugins.interface.noice")
 -- Code Syntax & LSP
-Add("runfridge.plugins.treesitter")
-Add("runfridge.plugins.lsp")
-Add("runfridge.plugins.conform")
-Add("runfridge.plugins.copilot")
+Add("runfridge.plugins.lsp.conform")
+Add("runfridge.plugins.lsp.copilot")
+Add("runfridge.plugins.lsp.lsp")
+Add("runfridge.plugins.lsp.treesitter")
 -- Misc
-Add("runfridge.plugins.wakatime")
-Add("runfridge.plugins.garbage")
-Add("runfridge.plugins.plenary")
+Add("runfridge.plugins.misc.wakatime")
+Add("runfridge.plugins.misc.garbage")
+Add("runfridge.plugins.misc.plenary")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
