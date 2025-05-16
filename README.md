@@ -4,7 +4,7 @@
 
 ## Requirement
 
-- [Neovim ^0.9.5](https://neovim.io/)
+- [Neovim ^0.10.4](https://neovim.io/)
 
 ## Setup Guide
 
