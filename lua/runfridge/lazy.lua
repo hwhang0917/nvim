@@ -7,6 +7,7 @@ Add("runfridge.plugins.utility.tpope")
 Add("runfridge.plugins.utility.zen")
 -- Git
 Add("runfridge.plugins.git.fugitive")
+Add("runfridge.plugins.git.gitsigns")
 -- Theme
 Add("runfridge.plugins.theme.catppuccin")
 Add("runfridge.plugins.theme.tokyonight")
