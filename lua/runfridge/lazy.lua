@@ -28,6 +28,7 @@ Add("runfridge.plugins.lsp.treesitter")
 Add("runfridge.plugins.misc.wakatime")
 Add("runfridge.plugins.misc.garbage")
 Add("runfridge.plugins.misc.plenary")
+Add("runfridge.plugins.misc.bloat")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
