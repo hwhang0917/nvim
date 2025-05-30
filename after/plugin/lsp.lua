@@ -1,4 +1,6 @@
 local lsp = require("lsp-zero")
+local mason_registry = require("mason-registry")
+mason_registry.refresh()
 
 lsp.preset("recommended")
 
@@ -112,7 +114,6 @@ lsp.on_attach(function(_, bufnr)
 	end, MergeTable(opts, { desc = "LSP Signature Help" }))
 end)
 
-local mason_registry = require("mason-registry")
 local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
 	.. "/node_modules/@vue/language-server"
 
