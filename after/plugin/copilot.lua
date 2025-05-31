@@ -1,5 +1,3 @@
-local noice = require("noice")
-
 vim.keymap.set("i", "<C-c>", 'copilot#Accept("\\<CR>")', {
 	expr = true,
 	replace_keycodes = false,
@@ -22,8 +20,5 @@ vim.keymap.set("n", "<leader>cp", function()
         vim.cmd("Copilot enable")
         status_message = "enabled"
     end
-    noice.notify("Copilot has been " .. status_message, "info", {
-        title = "Copilot Status",
-        timeout = 1000
-    })
+    Notify("Coiplot Status", "Copilot has been " .. status_message)
 end, { desc = "Copilot Toggle" })

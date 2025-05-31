@@ -7,7 +7,9 @@ return {
 		{ -- Optional
 			"williamboman/mason.nvim",
             branch = "v1.x",
-			build = ":MasonUpdate",
+			build = function()
+                pcall(vim.cmd, "MasonUpdate")
+            end
 		},
 		{
             "williamboman/mason-lspconfig.nvim",

@@ -22,3 +22,27 @@ function MergeTable(table1, table2)
 	end
 	return result
 end
+
+-- Noice or vim notify
+function Notify(title, text, level, timeout)
+    level = level or "info"
+    timeout = timeout or 1000
+	
+	local message = title and (title .. ": " .. text) or text
+	local ok, noice = pcall(require, "noice")
+	if ok then
+		noice.notify(text, level, {
+			title = title,
+			timeout = timeout
+		})
+	else
+		local vim_level = vim.log.levels.INFO
+		if level == "error" then
+			vim_level = vim.log.levels.ERROR
+		elseif level == "warn" then
+			vim_level = vim.log.levels.WARN
+		end
+		
+		vim.notify(message, vim_level)
+	end
+end

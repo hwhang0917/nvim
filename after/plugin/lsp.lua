@@ -1,24 +1,7 @@
 local lsp = require("lsp-zero")
 local mason_registry = require("mason-registry")
-mason_registry.refresh()
 
 lsp.preset("recommended")
-
--- Uncomment if you want to use the default LSP settings.
-lsp.ensure_installed({
-	"lua_ls",
-	"ts_ls",
-	"eslint",
-	"tailwindcss",
-	"yamlls",
-	"rust_analyzer",
-	"jsonls",
-	"html",
-	"dockerls",
-	"bashls",
-	"volar",
-    "gopls"
-})
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -114,26 +97,44 @@ lsp.on_attach(function(_, bufnr)
 	end, MergeTable(opts, { desc = "LSP Signature Help" }))
 end)
 
-local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
-	.. "/node_modules/@vue/language-server"
+mason_registry.refresh(function()
+    lsp.ensure_installed({
+        "lua_ls",
+        "ts_ls",
+        "eslint",
+        "tailwindcss",
+        "yamlls",
+        "rust_analyzer",
+        "jsonls",
+        "html",
+        "dockerls",
+        "bashls",
+        "volar",
+        "gopls",
+    })
 
-local lspconfig = require("lspconfig")
-lspconfig.ts_ls.setup({
-	init_options = {
-		plugins = {
-			{
-				name = "@vue/typescript-plugin",
-				location = vue_language_server_path,
-				languages = { "vue" },
-			},
-		},
-	},
+    -- Setup vue language server in Hybrid mode
+    local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+        .. "/node_modules/@vue/language-server"
 
-	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-})
-lspconfig.volar.setup({})
-lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
-lsp.setup()
+    local lspconfig = require("lspconfig")
+    lspconfig.ts_ls.setup({
+        init_options = {
+            plugins = {
+                {
+                    name = "@vue/typescript-plugin",
+                    location = vue_language_server_path,
+                    languages = { "vue" },
+                },
+            },
+        },
+
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+    })
+    lspconfig.volar.setup({})
+    lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+    lsp.setup()
+end)
 
 local cmp_action = require("lsp-zero").cmp_action()
 
