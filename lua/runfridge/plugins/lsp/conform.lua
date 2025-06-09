@@ -4,23 +4,26 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				json = { "prettier" },
-				graphql = { "prettier" },
-				markdown = { "prettier" },
-				html = { "htmlbeautifier" },
-				bash = { "beautysh" },
-				yaml = { "yamlfix" },
-				css = { "prettier" },
-				vue = { "volar", "prettier", "eslint" },
+				javascript = { "biome" },
+				typescript = { "biome" },
+				javascriptreact = { "biome" },
+				typescriptreact = { "biome" },
+				json = { "biome" },
+				graphql = { "biome" },
+				markdown = { "biome" },
+				html = { "prettier" },
+				css = { "biome" },
+				vue = { "biome" },
 			},
-			-- format_on_save = {
-			--     timeout_ms = 10000,
-			--     lsp_fallback = true,
-			-- },
+			formatters = {
+				biome = {
+					command = vim.fn.stdpath("data") .. "/mason/bin/biome.cmd",
+				},
+			},
+			format_on_save = {
+				timeout_ms = 10000,
+				lsp_fallback = true,
+			},
 		})
 	end,
 }
