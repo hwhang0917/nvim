@@ -1,4 +1,5 @@
 local builtin = require("telescope.builtin")
+local telescope = require("telescope")
 
 -- Open vim help
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
@@ -25,8 +26,14 @@ else
 	vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 end
 
+-- Open Nerdy telescope
+vim.keymap.set("n", "<leader>nd", function()
+    telescope.extensions.nerdy.nerdy()
+end, {})
+
 -- Extensions
-require("telescope").load_extension("noice")
+telescope.load_extension("noice")
+telescope.load_extension("nerdy")
 
 -- Disable <C-o>
 vim.keymap.set("n", "<C-o>", "<nop>", {})

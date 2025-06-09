@@ -1,6 +1,7 @@
 -- Utilities
 Add("runfridge.plugins.utility.arena")
 Add("runfridge.plugins.utility.harpoon")
+Add("runfridge.plugins.utility.nerdy")
 Add("runfridge.plugins.utility.nvim-tree")
 Add("runfridge.plugins.utility.telescope")
 Add("runfridge.plugins.utility.tpope")
