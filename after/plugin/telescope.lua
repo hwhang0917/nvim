@@ -27,7 +27,7 @@ else
 end
 
 -- Open Nerdy telescope
-vim.keymap.set("n", "<leader>nd", function()
+vim.keymap.set("n", "<leader>nerdy", function()
     telescope.extensions.nerdy.nerdy()
 end, {})
 
