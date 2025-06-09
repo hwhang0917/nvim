@@ -20,10 +20,10 @@ return {
 					command = vim.fn.stdpath("data") .. "/mason/bin/biome.cmd",
 				},
 			},
-			format_on_save = {
-				timeout_ms = 10000,
-				lsp_fallback = true,
-			},
+			-- format_on_save = {
+			-- 	timeout_ms = 10000,
+			-- 	lsp_fallback = true,
+			-- },
 		})
 	end,
 }
