@@ -27,7 +27,7 @@ end
 function Notify(title, text, level, timeout)
     level = level or "info"
     timeout = timeout or 1000
-	
+
 	local message = title and (title .. ": " .. text) or text
 	local ok, noice = pcall(require, "noice")
 	if ok then
@@ -42,7 +42,21 @@ function Notify(title, text, level, timeout)
 		elseif level == "warn" then
 			vim_level = vim.log.levels.WARN
 		end
-		
+
 		vim.notify(message, vim_level)
 	end
+end
+
+-- Get the current Operating System
+function GetOS()
+    local os_name = vim.uv.os_uname().sysname:lower()
+    if os_name:find("windows") then
+        return "windows"
+    elseif os_name:find("linux") then
+        return "linux"
+    elseif os_name:find("darwin") then
+        return "macos"
+    else
+        return "unknown"
+    end
 end
