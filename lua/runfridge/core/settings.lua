@@ -1,3 +1,10 @@
+local operating_system = GetOS()
+
+if operating_system == "windows" then
+	vim.opt.shell = "cmd.exe"
+	vim.opt.shellcmdflag = "/c"
+end
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -15,10 +22,10 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-if vim.fn.has("macunix") then
-	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+if operating_system == "windows" then
+	vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
 else
-	vim.opt.undodir = os.getenv("HOME") .. "./vim/undodir"
+	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
 vim.opt.undofile = true
 
