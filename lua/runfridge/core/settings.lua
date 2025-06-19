@@ -6,6 +6,7 @@ if operating_system == "windows" then
 end
 
 vim.opt.guicursor = ""
+vim.opt.mouse = ""
 
 vim.opt.nu = true
 vim.opt.rnu = true
