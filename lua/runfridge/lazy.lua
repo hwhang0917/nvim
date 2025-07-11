@@ -23,6 +23,7 @@ Add("runfridge.plugins.interface.noice")
 -- Code Syntax & LSP
 Add("runfridge.plugins.lsp.conform")
 Add("runfridge.plugins.lsp.copilot")
+Add("runfridge.plugins.lsp.vim-go")
 Add("runfridge.plugins.lsp.lsp")
 Add("runfridge.plugins.lsp.treesitter")
 -- Misc
@@ -45,7 +46,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
+            { out,                            "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
