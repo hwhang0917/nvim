@@ -14,11 +14,12 @@ return {
 				html = { "prettier" },
 				css = { "prettier" },
 				vue = { "prettier" },
+                go = { "gopls", "goimports" },
 			},
-			-- format_on_save = {
-			-- 	timeout_ms = 10000,
-			-- 	lsp_fallback = true,
-			-- },
+			format_on_save = {
+				timeout_ms = 10000,
+				lsp_fallback = true,
+			},
 		})
 	end,
 }
