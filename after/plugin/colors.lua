@@ -39,7 +39,8 @@ end
 vim.api.nvim_set_keymap("n", "<leader>tt", ":lua TOB()<CR>", { noremap = true, silent = true })
 
 -- Defaults to transparent background
-if default_transparency then RCS() end
+if default_transparency then
+	RCS()
+end
 
 require("notify").setup({ background_colour = "#000000" })
-
