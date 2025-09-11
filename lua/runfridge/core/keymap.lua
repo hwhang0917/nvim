@@ -31,6 +31,8 @@ keymap("", "<Space>", "<Nop>", opts)
 keymap(normal_mode, "Q", "<nop>", opts)
 -- keymap(normal_mode, "<C-[>", "<Esc>", opts)
 
+keymap(terminal_mode, "<Esc><Esc>", "<C-\\><C-n>", term_opts)
+
 -- Deny regular keys
 -- keymap(normal_mode, "<left>", ":echohl WarningMsg<Bar>echo 'USE h you SWINE!'<Bar>echohl None<CR>", opts)
 -- keymap(normal_mode, "<right>", ":echohl WarningMsg<Bar>echo 'USE l you SWINE!'<Bar>echohl None<CR>", opts)
