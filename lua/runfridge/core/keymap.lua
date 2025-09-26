@@ -55,7 +55,3 @@ map("n", "<leader>lw", function() vim.wo.wrap = not vim.wo.wrap end, O({ desc = 
 -- Diagnostics
 map("n", "[g", function() vim.diagnostic.goto_prev() end, O({ desc = "Prev diagnostic" }))
 map("n", "]g", function() vim.diagnostic.goto_next() end, O({ desc = "Next diagnostic" }))
-
-map("n", "<C-n>", function()
-    if vim.bo.filetype == "netrw" then vim.cmd("bd") else vim.cmd("Explore") end
-end, O({ desc = "Toggle Netrw" }))
