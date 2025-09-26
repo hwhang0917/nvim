@@ -1,3 +1,0 @@
-return {
-    "bettervim/yugen.nvim"
-}

@@ -1,5 +1,1 @@
-require("runfridge.launch")
-require("runfridge.core.settings")
-require("runfridge.core.keymap")
-require("runfridge.core.autocmd")
-require("runfridge.lazy")
+
