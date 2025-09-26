@@ -8,12 +8,10 @@ return {
         },
     },
     cmd = "Telescope",
-    config = function()
-        require("telescope").setup({
-            defaults = {
-                disable_devicons = false,
-                path_display = { "truncate" },
-            },
-        })
-    end,
+    opts = {
+        defaults = {
+            disable_devicons = false,
+            path_display = { "truncate" },
+        },
+    },
 }
