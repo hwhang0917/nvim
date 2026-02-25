@@ -1,9 +1,15 @@
-local default_theme = "catppuccin"
+local default_theme = "rose-pine"
 local default_transparency = true
 
 vim.cmd.colorscheme(default_theme)
 -- require("catppuccin").setup({ flavour = "mocha" })
-require("rose-pine").setup({ variant = "dawn" })
+require("rose-pine").setup({
+    variant = "dawn",
+    highlight_groups = {
+        StatusLine = { fg = "love", bg = "love", blend = 10 },
+        StatusLineNC = { fg = "subtle", bg = "surface" },
+    },
+})
 
 -- Reset Colorscheme
 function RCS(color)
@@ -45,14 +51,3 @@ if default_transparency then
 end
 
 require("notify").setup({ background_colour = "#000000" })
-
--- Minimal Roseline Status Line
-vim.opt.laststatus = 2 -- Or 3 for global statusline
-vim.opt.statusline = " %f %m %= %l:%c ♥ "
-
-require("rose-pine").setup({
-    highlight_groups = {
-        StatusLine = { fg = "love", bg = "love", blend = 10 },
-        StatusLineNC = { fg = "subtle", bg = "surface" },
-    },
-})
