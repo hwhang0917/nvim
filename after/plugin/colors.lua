@@ -4,7 +4,7 @@ local default_transparency = true
 vim.cmd.colorscheme(default_theme)
 -- require("catppuccin").setup({ flavour = "mocha" })
 require("rose-pine").setup({
-    variant = "dawn",
+    -- variant = "dawn",
     highlight_groups = {
         StatusLine = { fg = "love", bg = "love", blend = 10 },
         StatusLineNC = { fg = "subtle", bg = "surface" },
