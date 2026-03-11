@@ -1,6 +1,12 @@
 local default_theme = "rose-pine"
 local default_transparency = true
 
+-- custom status line
+local os_icons = { Windows_NT = "", Linux = "", Darwin = "" }
+local os_icon = os_icons[vim.uv.os_uname().sysname] or "💀"
+vim.opt.laststatus = 2
+vim.opt.statusline = " %f %m %= %l:%c " .. os_icon .. " "
+
 vim.cmd.colorscheme(default_theme)
 -- require("catppuccin").setup({ flavour = "mocha" })
 require("rose-pine").setup({
