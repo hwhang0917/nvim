@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local operating_system = GetOS()
 
 if operating_system == "windows" then

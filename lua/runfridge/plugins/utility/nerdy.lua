@@ -1,5 +1,5 @@
 return {
     "2kabhishek/nerdy.nvim",
-    dependencies = { "folke/snacks.nvim" },
+    dependencies = { "nvim-telescope/telescope.nvim" },
     cmd = "Nerdy"
 }
