@@ -1,5 +1,9 @@
 # Neovim Configuration
 
+<a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/plugin-manager?style=flat" /></a>
+
 > My Neovim Configuration file inspired by [Andrew Courter](https://www.youtube.com/@ascourter) and [ThePrimeagen](https://www.youtube.com/ThePrimeagen)
 
 ## Requirement
