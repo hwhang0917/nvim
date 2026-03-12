@@ -25,3 +25,13 @@
   ```sh
   git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
   ```
+
+## Testing with Docker
+
+You can test the configuration in a clean Arch Linux container without affecting your local setup.
+
+```sh
+docker compose run --rm nvim
+```
+
+First run installs system dependencies and bootstraps plugins. Subsequent runs are faster thanks to cached volumes.
