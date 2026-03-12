@@ -1,5 +1,7 @@
 return {
 	"stevearc/conform.nvim",
+	event = "BufWritePre",
+	cmd = "Format",
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {

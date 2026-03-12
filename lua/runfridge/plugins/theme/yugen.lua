@@ -1,3 +1,4 @@
 return {
-    "bettervim/yugen.nvim"
+    "bettervim/yugen.nvim",
+    lazy = true,
 }

@@ -1,7 +1,6 @@
 return {
 	"folke/tokyonight.nvim",
-	lazy = false,
-	priority = 1000,
+	lazy = true,
 	config = function()
 		require("tokyonight").setup({
 			style = "moon",

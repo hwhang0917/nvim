@@ -23,7 +23,6 @@ Add("runfridge.plugins.interface.noice")
 -- Code Syntax & LSP
 Add("runfridge.plugins.lsp.conform")
 Add("runfridge.plugins.lsp.copilot")
-Add("runfridge.plugins.lsp.vim-go")
 Add("runfridge.plugins.lsp.lsp")
 Add("runfridge.plugins.lsp.treesitter")
 -- Misc
@@ -55,5 +54,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(PLUGIN_SPECS, {
-    checker = { enabled = true, notify = false },
+    checker = { enabled = false },
 })
