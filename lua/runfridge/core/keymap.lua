@@ -80,10 +80,10 @@ end, opts)
 
 -- Move around error/warnings
 keymap_fn(normal_mode, "[g", function()
-	vim.diagnostic.goto_prev()
+	vim.diagnostic.jump({ count = -1, float = true })
 end, opts)
 keymap_fn(normal_mode, "]g", function()
-	vim.diagnostic.goto_next()
+	vim.diagnostic.jump({ count = 1, float = true })
 end, opts)
 
 -- Disable <C-o>

@@ -27,22 +27,16 @@ return {
 
 		local servers = {
 			"lua_ls", "ts_ls", "eslint", "tailwindcss", "yamlls",
-			"rust_analyzer", "jsonls", "html", "dockerls", "volar", "gopls",
+			"rust_analyzer", "jsonls", "html", "dockerls", "vue_ls", "gopls",
 		}
 
 		require("mason-lspconfig").setup({
 			ensure_installed = servers,
 		})
 
-		-- Vue language server path
-		local mason_registry = require("mason-registry")
-		local vue_language_server_path = ""
-		local ok, vue_pkg = pcall(function()
-			return mason_registry.get_package("vue-language-server"):get_install_path()
-		end)
-		if ok then
-			vue_language_server_path = vue_pkg .. "/node_modules/@vue/language-server"
-		end
+		-- Vue language server path (static path per Mason v2 docs)
+		local vue_language_server_path = vim.fn.stdpath("data")
+			.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
 
 		vim.lsp.config("*", {
 			capabilities = cmp_nvim_lsp.default_capabilities(),
@@ -155,6 +149,7 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
+		---@diagnostic disable-next-line: redundant-parameter
 		cmp.setup({
 			snippet = {
 				expand = function(args)
