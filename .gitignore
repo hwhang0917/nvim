@@ -1,3 +1,4 @@
 plugin
 !*after/plugin
 .luarc.json
+.claude
