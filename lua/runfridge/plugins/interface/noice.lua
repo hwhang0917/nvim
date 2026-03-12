@@ -1,6 +1,16 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	keys = {
+		{ "<leader>nd", "<cmd>NoiceDismiss<CR>", desc = "Dismiss Noice Message" },
+	},
+	dependencies = {
+		"MunifTanjim/nui.nvim",
+		{
+			"rcarriga/nvim-notify",
+			opts = { background_colour = "#000000" },
+		},
+	},
 	opts = {
 		routes = {
 			{
@@ -14,9 +24,5 @@ return {
 		messages = {
 			enabled = false,
 		},
-	},
-	dependencies = {
-		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
 	},
 }

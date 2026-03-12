@@ -86,6 +86,9 @@ keymap_fn(normal_mode, "]g", function()
 	vim.diagnostic.goto_next()
 end, opts)
 
+-- Disable <C-o>
+keymap(normal_mode, "<C-o>", "<nop>", opts)
+
 -- Conform (format)
 vim.api.nvim_create_user_command("Format", function(args)
 	local range = nil
