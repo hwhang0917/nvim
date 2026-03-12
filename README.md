@@ -1,10 +1,16 @@
 # Neovim Configuration
 
+![nvim-screenshot](assets/screenshot.png)
+
 <a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/hwhang0917/nvim"><img src="https://dotfyle.com/hwhang0917/nvim/badges/plugin-manager?style=flat" /></a>
 
 > My Neovim Configuration file inspired by [Andrew Courter](https://www.youtube.com/@ascourter) and [ThePrimeagen](https://www.youtube.com/ThePrimeagen)
+
+## Fonts
+
+- [FiraCode Nerd Font Mono](https://www.nerdfonts.com/)
 
 ## Requirement
 
