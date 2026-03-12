@@ -12,7 +12,7 @@ vim.cmd.colorscheme(default_theme)
 require("rose-pine").setup({
     -- variant = "dawn",
     highlight_groups = {
-        StatusLine = { fg = "love", bg = "love", blend = 10 },
+        StatusLine = { fg = "iris", bg = "iris", blend = 10 },
         StatusLineNC = { fg = "subtle", bg = "surface" },
     },
 })
