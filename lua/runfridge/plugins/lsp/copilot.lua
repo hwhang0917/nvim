@@ -8,12 +8,12 @@ return {
 			if vim.g.copilot_enabled then
 				vim.cmd("Copilot disable")
 				vim.g.copilot_enabled = false
-				Notify("Copilot Status", "Copilot has been disabled")
+				require("runfridge.utils").notify("Copilot Status", "Copilot has been disabled")
 			else
 				vim.cmd("Copilot enable")
 				vim.g.copilot_enabled = true
 				quota_disabled = false
-				Notify("Copilot Status", "Copilot has been enabled")
+				require("runfridge.utils").notify("Copilot Status", "Copilot has been enabled")
 			end
 		end, desc = "Copilot Toggle" },
 	},
@@ -37,7 +37,7 @@ return {
 					vim.cmd("Copilot disable")
 					vim.g.copilot_enabled = false
 					quota_disabled = true
-					Notify("Copilot Status", "Copilot disabled: monthly quota used up")
+					require("runfridge.utils").notify("Copilot Status", "Copilot disabled: monthly quota used up")
 				end
 			end,
 		})

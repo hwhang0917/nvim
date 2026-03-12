@@ -1,30 +1,19 @@
-function IsGitRepo()
+local M = {}
+
+function M.is_git_repo()
 	return vim.fn.finddir(".git", ".;") ~= ""
 end
 
--- Merge Tables
-function MergeTable(table1, table2)
-	local result = {}
-	for key, value in pairs(table1) do
-		result[key] = value
-	end
-	for key, value in pairs(table2) do
-		result[key] = value
-	end
-	return result
-end
-
--- Noice or vim notify
-function Notify(title, text, level, timeout)
-    level = level or "info"
-    timeout = timeout or 1000
+function M.notify(title, text, level, timeout)
+	level = level or "info"
+	timeout = timeout or 1000
 
 	local message = title and (title .. ": " .. text) or text
 	local ok, noice = pcall(require, "noice")
 	if ok then
 		noice.notify(text, level, {
 			title = title,
-			timeout = timeout
+			timeout = timeout,
 		})
 	else
 		local vim_level = vim.log.levels.INFO
@@ -33,21 +22,21 @@ function Notify(title, text, level, timeout)
 		elseif level == "warn" then
 			vim_level = vim.log.levels.WARN
 		end
-
 		vim.notify(message, vim_level)
 	end
 end
 
--- Get the current Operating System
-function GetOS()
-    local os_name = vim.uv.os_uname().sysname:lower()
-    if os_name:find("windows") then
-        return "windows"
-    elseif os_name:find("linux") then
-        return "linux"
-    elseif os_name:find("darwin") then
-        return "macos"
-    else
-        return "unknown"
-    end
+function M.get_os()
+	local os_name = vim.uv.os_uname().sysname:lower()
+	if os_name:find("windows") then
+		return "windows"
+	elseif os_name:find("linux") then
+		return "linux"
+	elseif os_name:find("darwin") then
+		return "macos"
+	else
+		return "unknown"
+	end
 end
+
+return M

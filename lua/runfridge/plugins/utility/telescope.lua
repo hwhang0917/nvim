@@ -13,7 +13,7 @@ local telescope_keys = {
 		)
 	end, desc = "Buffer Fuzzy Find" },
 	{ "<C-p>", function()
-		if IsGitRepo() then
+		if require("runfridge.utils").is_git_repo() then
 			require("telescope.builtin").git_files()
 		else
 			require("telescope.builtin").find_files()
@@ -25,7 +25,7 @@ local telescope_keys = {
 	end, desc = "Nerdy Icons" },
 }
 
-if IsGitRepo() then
+if require("runfridge.utils").is_git_repo() then
 	table.insert(telescope_keys, {
 		"<leader>gc", function() require("telescope.builtin").git_commits() end, desc = "Git Commits",
 	})

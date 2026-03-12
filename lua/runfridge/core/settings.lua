@@ -5,7 +5,8 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_node_provider = 0
 
-local operating_system = GetOS()
+local utils = require("runfridge.utils")
+local operating_system = utils.get_os()
 
 if operating_system == "windows" then
 	vim.opt.shell = "cmd.exe"
