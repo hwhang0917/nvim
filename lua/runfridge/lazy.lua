@@ -55,4 +55,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(PLUGIN_SPECS, {
     checker = { enabled = false },
+    install = { colorscheme = { "rose-pine", "habamax" } },
 })

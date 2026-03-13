@@ -26,6 +26,27 @@ function M.notify(title, text, level, timeout)
 	end
 end
 
+local transparent = false
+
+function M.apply_transparency(color)
+	vim.cmd.colorscheme(color or vim.g.colors_name)
+	local groups = { "Normal", "NormalFloat", "NormalNC", "NvimTreeNormal", "NvimTreeNormalFloat", "NvimTreeNormalNC" }
+	for _, group in ipairs(groups) do
+		vim.api.nvim_set_hl(0, group, { bg = "none" })
+	end
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "gray" })
+	transparent = true
+end
+
+function M.toggle_transparency(color)
+	if transparent then
+		vim.cmd.colorscheme(color or vim.g.colors_name)
+		transparent = false
+	else
+		M.apply_transparency(color)
+	end
+end
+
 function M.get_os()
 	local os_name = vim.uv.os_uname().sysname:lower()
 	if os_name:find("windows") then
