@@ -1,6 +1,7 @@
 services:
   nvim:
     build: .
+    image: nvim-hwhang0917
     stdin_open: true
     tty: true
     volumes:
