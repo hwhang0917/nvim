@@ -1,6 +1,8 @@
 local M = {}
 
 local local_defaults = {
+    theme = "rose-pine",
+    transparent = true,
     llm_enabled = false,
     llm_model = "qwen2.5-coder:1.5b-base",
     llm_backend = "ollama",

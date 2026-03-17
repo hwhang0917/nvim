@@ -1,7 +1,8 @@
 local utils = require("runfridge.utils")
+local cfg = utils.local_config()
 
-local theme = "rose-pine"
-local transparent = true
+local theme = cfg.theme or "rose-pine"
+local transparent = cfg.transparent
 
 -- Statusline
 local os_icons = { Windows_NT = "", Linux = "", Darwin = "" }
