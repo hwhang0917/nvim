@@ -1,6 +1,7 @@
-local ok, local_config = pcall(require, "runfridge.local")
-if not ok then
-    local_config = {}
+local cfg = require("runfridge.utils").local_config()
+
+if not cfg.llm_enabled then
+    return {}
 end
 
 return {
@@ -15,9 +16,9 @@ return {
         end
     end,
     opts = {
-        model = local_config.llm_model or "qwen2.5-coder:1.5b-base",
-        backend = local_config.llm_backend or "ollama",
-        url = local_config.llm_url or "http://localhost:11434",
+        model = cfg.llm_model,
+        backend = cfg.llm_backend,
+        url = cfg.llm_url,
         tokens_to_clear = { "<|endoftext|>" },
         request_body = {
             options = {

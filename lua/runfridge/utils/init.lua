@@ -1,5 +1,21 @@
 local M = {}
 
+local local_defaults = {
+    llm_enabled = false,
+    llm_model = "qwen2.5-coder:1.5b-base",
+    llm_backend = "ollama",
+    llm_url = "http://localhost:11434",
+}
+
+local _local_config
+function M.local_config()
+    if not _local_config then
+        local ok, cfg = pcall(require, "runfridge.local")
+        _local_config = vim.tbl_extend("force", local_defaults, ok and cfg or {})
+    end
+    return _local_config
+end
+
 function M.is_git_repo()
 	return vim.fn.finddir(".git", ".;") ~= ""
 end
