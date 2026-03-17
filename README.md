@@ -36,6 +36,26 @@
   git clone https://github.com/hwhang0917/nvim.git ~/.config/nvim
   ```
 
+## Local Configuration
+
+Machine-specific settings (LLM model, backend URL, etc.) are stored in a gitignored file.
+
+```sh
+cp lua/runfridge/local.lua.example lua/runfridge/local.lua
+```
+
+Edit `local.lua` to match your setup:
+
+```lua
+return {
+    llm_model = "qwen2.5-coder:1.5b-base",
+    llm_backend = "ollama",
+    llm_url = "http://localhost:11434",
+}
+```
+
+> Requires [Ollama](https://ollama.com/) running locally with the configured model pulled.
+
 ## Testing with Docker
 
 You can test the configuration in a clean Arch Linux container without affecting your local setup.

@@ -1,0 +1,7 @@
+-- Machine-specific overrides (copy to local.lua)
+-- This file is gitignored and will not be committed.
+return {
+    llm_model = "qwen2.5-coder:1.5b-base",
+    llm_backend = "ollama",
+    llm_url = "http://localhost:11434",
+}
