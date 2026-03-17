@@ -25,6 +25,7 @@ Add("runfridge.plugins.lsp.conform")
 Add("runfridge.plugins.lsp.llm")
 Add("runfridge.plugins.lsp.lsp")
 Add("runfridge.plugins.lsp.treesitter")
+Add("runfridge.plugins.lsp.vim-go")
 -- Misc
 Add("runfridge.plugins.misc.wakatime")
 Add("runfridge.plugins.misc.plenary")
